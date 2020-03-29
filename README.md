@@ -7,3 +7,8 @@
 - nodejs para gerenciar a api 
 - reactjs para gerenciar o dashboard das ongs
 - android nativo com kotlin, que é o app dos usuários
+
+### Tarefas mobile
+- [ ] Adicionar lista de ongs 
+- [ ] Listar os casos a partir de cada ong
+- [ ] Adicionar filtro de mostrar ongs por UF
