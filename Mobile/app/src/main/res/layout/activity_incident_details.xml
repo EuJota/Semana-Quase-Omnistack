@@ -17,6 +17,7 @@
             android:text="Caso:"/>
 
         <TextView
+            android:id="@+id/text_caso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Caso x:"/>
@@ -27,6 +28,7 @@
             android:text="Descrição:"/>
 
         <TextView
+            android:id="@+id/text_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Detalhe descrição:"/>
@@ -37,6 +39,7 @@
             android:text="Valor:"/>
 
         <TextView
+            android:id="@+id/text_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Valor x:"/>
@@ -47,6 +50,7 @@
             android:text="ONG:"/>
 
         <TextView
+            android:id="@+id/text_ongname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ONG X:"/>

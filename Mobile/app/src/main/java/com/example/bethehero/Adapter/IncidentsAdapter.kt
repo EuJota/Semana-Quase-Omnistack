@@ -26,8 +26,11 @@ class IncidentsAdapter(val context: Context) : RecyclerView.Adapter<IncidentsAda
         holder.bind(incidents[position])
     }
 
+    /**Por que usar esse inner class? sei que consegui acessar o context através disso
+     * Ressaltando que aparentemente não é uma boa prática esse tipo de ação
+     */
     inner class IncidentsViewHolder(view : View) : RecyclerView.ViewHolder(view){
-        val intent: Intent? = null
+        val intent = Intent(context,IncidentDetails::class.java)
         private val textTitle = view.txt_case_title
         private val textValue = view.txt_value
         private val textOngName = view.txt_ong_name
@@ -40,9 +43,15 @@ class IncidentsAdapter(val context: Context) : RecyclerView.Adapter<IncidentsAda
             textOngName.text = _data.ongName
 
             btnDetails.setOnClickListener{
-                context.startActivity(Intent(context,IncidentDetails::class.java))
-            }
+                intent.putExtra("title",_data.title)
+                intent.putExtra("description", _data.description)
+                intent.putExtra("ongName", _data.ongName)
+                intent.putExtra("value", _data.value.toString())
 
+                context.startActivity(intent)
+
+                // context.startActivity(Intent(context,IncidentDetails::class.java))
+            }
         }
     }
 

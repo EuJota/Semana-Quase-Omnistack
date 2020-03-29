@@ -19,13 +19,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     lateinit var recyclerAdapter: IncidentsAdapter
 
-    interface OnItemClickListener{
-        fun onItemClicked(position: Int, view : View)
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val actionbar = supportActionBar
+        actionbar?.setDisplayHomeAsUpEnabled(false)
 
         recyclerView = findViewById(R.id.recyclerview_incidents_list)
         recyclerAdapter = IncidentsAdapter(this)
@@ -34,28 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         getIncidents()
 
-        recyclerView.addOnItemClickListener(object : OnItemClickListener{
-            override fun onItemClicked(position: Int, view: View) {
-                //System.out.println("CLICKED")
-            }
 
-        })
-    }
-
-    fun RecyclerView.addOnItemClickListener(onClickListener: OnItemClickListener){
-        this.addOnChildAttachStateChangeListener(object : RecyclerView.OnChildAttachStateChangeListener{
-            override fun onChildViewDetachedFromWindow(view: View) {
-                view?.setOnClickListener(null)
-            }
-
-            override fun onChildViewAttachedToWindow(view: View) {
-               view?.setOnClickListener({
-                   val holder = getChildViewHolder(view)
-                   onClickListener.onItemClicked(holder.adapterPosition, view)
-               })
-            }
-
-        })
     }
 
     fun getIncidents() {
@@ -77,3 +55,36 @@ class MainActivity : AppCompatActivity() {
         })
     }
 }
+
+/**
+ * Essa função cria uma chamada de click no adapter ^^
+ */
+
+
+//    interface OnItemClickListener{
+//        fun onItemClicked(position: Int, view : View)
+//    }
+
+//        recyclerView.addOnItemClickListener(object : OnItemClickListener{
+//            override fun onItemClicked(position: Int, view: View) {
+//                //System.out.println("CLICKED")
+//            }
+//
+//        })
+
+
+//    fun RecyclerView.addOnItemClickListener(onClickListener: OnItemClickListener){
+//        this.addOnChildAttachStateChangeListener(object : RecyclerView.OnChildAttachStateChangeListener{
+//            override fun onChildViewDetachedFromWindow(view: View) {
+//                view?.setOnClickListener(null)
+//            }
+//
+//            override fun onChildViewAttachedToWindow(view: View) {
+//               view?.setOnClickListener({
+//                   val holder = getChildViewHolder(view)
+//                   onClickListener.onItemClicked(holder.adapterPosition, view)
+//               })
+//            }
+//
+//        })
+//    }

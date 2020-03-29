@@ -1,47 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="15dp">
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="5dp"
+    android:layout_margin="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Caso:"/>
+        android:orientation="vertical"
+        android:padding="15dp">
 
-    <TextView
-        android:id="@+id/txt_case_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Caso x"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Valor"/>
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ONG:"
+                    android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/txt_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="R$ 20.00"/>
+                <TextView
+                    android:id="@+id/txt_ong_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome ong:"/>
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/btn_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ver mais detalhes"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="50dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caso:"
+                    android:textStyle="bold"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ONG:"/>
+                <TextView
+                    android:id="@+id/txt_case_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caso x"/>
+            </LinearLayout>
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_ong_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nome ong:"/>
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$ 20.00"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver mais detalhes"
+            android:textColor="#e02041"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
