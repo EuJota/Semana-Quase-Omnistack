@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     fun getIncidents() {
         val retrofitConfig = RetrofitConfig
-            .getRetrofitConfig("http://192.168.1.6:5000/")
+            .getRetrofitConfig("http://192.168.1.4:5000/")
 
         val incidentsEndpoint = retrofitConfig.create(Incidents::class.java)
         val callback = incidentsEndpoint.getIncidents()
