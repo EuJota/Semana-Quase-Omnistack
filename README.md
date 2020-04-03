@@ -9,6 +9,6 @@
 - android nativo com kotlin, que é o app dos usuários
 
 ### Tarefas mobile
-- [ ] Adicionar lista de ongs 
-- [ ] Listar os casos a partir de cada ong
+- [x] Adicionar lista de ongs 
+- [x] Listar os casos a partir de cada ong
 - [ ] Adicionar filtro de mostrar ongs por UF
