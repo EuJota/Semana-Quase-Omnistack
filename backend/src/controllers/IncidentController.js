@@ -20,11 +20,12 @@ module.exports = {
     },
 
     async incidentsById(request, response){
-        const ong_id = request.params;
+        const { ong_id } = request.params;
 
         const incidents = await connection('incidents')
             .where('ong_id', ong_id)
-            .select('*');
+            .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+            .select(['incidents.*', 'ongs.name']);
 
         console.log(ong_id)
         return response.json(incidents);

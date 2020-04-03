@@ -5,6 +5,7 @@ module.exports = {
     async index (request, response){
         const ongs = await connection('ongs').select('*'); //retorna um objeto
     
+        console.log("nice")
         return response.json(ongs);
     },
 
