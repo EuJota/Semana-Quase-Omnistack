@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".OngActivity"
     android:background="#fff0f0f5">
 
     <LinearLayout
@@ -23,15 +23,6 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:src="@drawable/logo3x"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total de casos: "
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="25dp"
-                android:layout_centerInParent="true"
-                />
         </RelativeLayout>
 
         <LinearLayout
@@ -53,7 +44,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Escolha um dos casos abaixo e salve o dia."/>
+                android:text="Escolha uma das ongs abaixo para visualizar os casos."/>
         </LinearLayout>
 
 
@@ -64,7 +55,7 @@
         android:layout_below="@id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerview_incidents_list"
+        android:id="@+id/recyclerview_ongs_list"
         android:backgroundTint="#41414d"/>
 
 </RelativeLayout>

@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity android:name=".OngActivity"></activity>
+        <activity
+            android:name=".IncidentsActivity"
+            android:theme="@style/AppThemeNoActionBar" />
         <activity android:name=".IncidentDetails" />
-        <activity android:name=".Splash"
+        <activity
+            android:name=".Splash"
             android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

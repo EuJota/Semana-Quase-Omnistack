@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface Incidents {
     @GET("incidents")
-    fun getIncidents() : Call<List<Incident>>
+    fun getIncidents(id : String) : Call<List<Incident>>
 }

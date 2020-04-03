@@ -3,18 +3,13 @@ package com.example.bethehero.Model
 import com.google.gson.annotations.SerializedName
 
 
+//TODO LISTAR AS ONGS A PARTIR DO UF
 
-data class Incident(
-    @SerializedName("title")
-    val title: String,
-    @SerializedName("description")
-    val description: String,
-    @SerializedName("value")
-    val value: Float,
-    @SerializedName("ong_id")
-    val ong_id: String,
+data class Ong(
+    @SerializedName("id")
+    val id: String,
     @SerializedName("name")
-    val ongName: String,
+    val name: String,
     @SerializedName("email")
     val email: String,
     @SerializedName("whatsapp")
