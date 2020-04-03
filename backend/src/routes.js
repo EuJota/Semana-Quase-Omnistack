@@ -6,6 +6,7 @@ const ProfileController = require('./controllers/ProfileController');
 const SessionController = require('./controllers/SessionController');
 
 const routes = express.Router();
+const ong_id = ""
 
 routes.post('/sessions', SessionController.create);
 
@@ -15,6 +16,7 @@ routes.post('/ongs', OngController.create);
 routes.get('/profile', ProfileController.index);
 
 routes.get('/incidents', IncidentController.index);
+routes.get(`/incidents?ong_id=${ong_id}`, IncidentController.incidentsById);
 routes.post('/incidents', IncidentController.create);
 routes.delete('/incidents/:id', IncidentController.delete);
 

@@ -14,6 +14,19 @@ module.exports = {
 
         response.header('X-Total-Count', count['count(*)'])
 
+        console.log("sfasf")
+
+        return response.json(incidents);
+    },
+
+    async incidentsById(request, response){
+        const ong_id = request.params;
+
+        const incidents = await connection('incidents')
+            .where('ong_id', ong_id)
+            .select('*');
+
+        console.log(ong_id)
         return response.json(incidents);
     },
 
